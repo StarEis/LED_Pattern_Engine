@@ -1,0 +1,1080 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x591A147B08EC7E22",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../LED_Pattern_Engine.gen/sources_1/bd/LED_Pattern_Engine",
+      "name": "LED_Pattern_Engine",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "clk_enable_gen_0": "",
+      "pattern_gen_0": "",
+      "debouncer_0": "",
+      "debouncer_1": "",
+      "xlconcat_0": "",
+      "ilslice_0": "",
+      "ilslice_1": "",
+      "debouncer_2": "",
+      "util_vector_logic_0": "",
+      "edge_detect_0": "",
+      "edge_detect_1": "",
+      "debouncer_3": "",
+      "debouncer_4": "",
+      "debouncer_5": "",
+      "debouncer_6": "",
+      "edge_detect_2": "",
+      "debouncer_7": "",
+      "edge_detect_3": ""
+    },
+    "ports": {
+      "step_rate_i": {
+        "type": "data",
+        "direction": "I",
+        "left": "1",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pattern_o_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "btn_i_0": {
+        "direction": "I"
+      },
+      "btn_i_1": {
+        "direction": "I"
+      },
+      "SW2": {
+        "direction": "I"
+      },
+      "SW3": {
+        "direction": "I"
+      },
+      "btn_i_2": {
+        "direction": "I"
+      },
+      "btn_i_3": {
+        "direction": "I"
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "LED_Pattern_Engine_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "LED_Pattern_Engine_clk_wiz_0_0",
+        "xci_path": "ip\\LED_Pattern_Engine_clk_wiz_0_0\\LED_Pattern_Engine_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
+          "CLKIN2_JITTER_PS": {
+            "value": "89.99"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "125.031"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "104.065"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "125.000"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "CLK_IN2_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "7"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "7"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "1"
+          },
+          "PLL_CLKIN_PERIOD": {
+            "value": "8.000"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_INCLK_SWITCHOVER": {
+            "value": "false"
+          }
+        }
+      },
+      "clk_enable_gen_0": {
+        "vlnv": "xilinx.com:module_ref:clk_enable_gen:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_clk_enable_gen_0_0",
+        "xci_path": "ip\\LED_Pattern_Engine_clk_enable_gen_0_0\\LED_Pattern_Engine_clk_enable_gen_0_0.xci",
+        "inst_hier_path": "clk_enable_gen_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clk_enable_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "step_rate_i": {
+            "direction": "I",
+            "left": "1",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "2",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "start_i": {
+            "direction": "I"
+          },
+          "enable_o": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
+      "pattern_gen_0": {
+        "vlnv": "xilinx.com:module_ref:pattern_gen:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_pattern_gen_0_0",
+        "xci_path": "ip\\LED_Pattern_Engine_pattern_gen_0_0\\LED_Pattern_Engine_pattern_gen_0_0.xci",
+        "inst_hier_path": "pattern_gen_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pattern_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "step_i": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "up_or_down_i": {
+            "direction": "I"
+          },
+          "halve_brightness_i": {
+            "direction": "I"
+          },
+          "change_pattern_i": {
+            "direction": "I"
+          },
+          "reset_pattern_i": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "pattern_o": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_debouncer_0_0",
+        "xci_path": "ip\\LED_Pattern_Engine_debouncer_0_0\\LED_Pattern_Engine_debouncer_0_0.xci",
+        "inst_hier_path": "debouncer_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "btn_i": {
+            "direction": "I",
+            "parameters": {
+              "PortWidth": {
+                "value": "1",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_1": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_debouncer_1_0",
+        "xci_path": "ip\\LED_Pattern_Engine_debouncer_1_0\\LED_Pattern_Engine_debouncer_1_0.xci",
+        "inst_hier_path": "debouncer_1",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "btn_i": {
+            "direction": "I",
+            "parameters": {
+              "PortWidth": {
+                "value": "1",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "7",
+        "xci_name": "LED_Pattern_Engine_xlconcat_0_0",
+        "xci_path": "ip\\LED_Pattern_Engine_xlconcat_0_0\\LED_Pattern_Engine_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "has_run_ip_tcl": "true"
+      },
+      "ilslice_0": {
+        "vlnv": "xilinx.com:inline_hdl:ilslice:1.0",
+        "parameters": {
+          "DIN_WIDTH": {
+            "value": "2"
+          }
+        }
+      },
+      "ilslice_1": {
+        "vlnv": "xilinx.com:inline_hdl:ilslice:1.0",
+        "parameters": {
+          "DIN_TO": {
+            "value": "1"
+          },
+          "DIN_WIDTH": {
+            "value": "2"
+          }
+        }
+      },
+      "debouncer_2": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_debouncer_2_0",
+        "xci_path": "ip\\LED_Pattern_Engine_debouncer_2_0\\LED_Pattern_Engine_debouncer_2_0.xci",
+        "inst_hier_path": "debouncer_2",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "btn_i": {
+            "direction": "I"
+          },
+          "btn_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "5",
+        "xci_name": "LED_Pattern_Engine_util_vector_logic_0_0",
+        "xci_path": "ip\\LED_Pattern_Engine_util_vector_logic_0_0\\LED_Pattern_Engine_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "edge_detect_0": {
+        "vlnv": "xilinx.com:module_ref:edge_detect:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_edge_detect_0_0",
+        "xci_path": "ip\\LED_Pattern_Engine_edge_detect_0_0\\LED_Pattern_Engine_edge_detect_0_0.xci",
+        "inst_hier_path": "edge_detect_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "edge_detect",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "signal_i": {
+            "direction": "I"
+          },
+          "posedge_o": {
+            "direction": "O"
+          },
+          "negedge_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "edge_detect_1": {
+        "vlnv": "xilinx.com:module_ref:edge_detect:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_edge_detect_1_0",
+        "xci_path": "ip\\LED_Pattern_Engine_edge_detect_1_0\\LED_Pattern_Engine_edge_detect_1_0.xci",
+        "inst_hier_path": "edge_detect_1",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "edge_detect",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "signal_i": {
+            "direction": "I"
+          },
+          "posedge_o": {
+            "direction": "O"
+          },
+          "negedge_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_3": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_debouncer_3_0",
+        "xci_path": "ip\\LED_Pattern_Engine_debouncer_3_0\\LED_Pattern_Engine_debouncer_3_0.xci",
+        "inst_hier_path": "debouncer_3",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "btn_i": {
+            "direction": "I"
+          },
+          "btn_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_4": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_debouncer_4_0",
+        "xci_path": "ip\\LED_Pattern_Engine_debouncer_4_0\\LED_Pattern_Engine_debouncer_4_0.xci",
+        "inst_hier_path": "debouncer_4",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "btn_i": {
+            "direction": "I"
+          },
+          "btn_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_5": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_debouncer_5_0",
+        "xci_path": "ip\\LED_Pattern_Engine_debouncer_5_0\\LED_Pattern_Engine_debouncer_5_0.xci",
+        "inst_hier_path": "debouncer_5",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "btn_i": {
+            "direction": "I"
+          },
+          "btn_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_6": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_debouncer_6_0",
+        "xci_path": "ip\\LED_Pattern_Engine_debouncer_6_0\\LED_Pattern_Engine_debouncer_6_0.xci",
+        "inst_hier_path": "debouncer_6",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "btn_i": {
+            "direction": "I"
+          },
+          "btn_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "edge_detect_2": {
+        "vlnv": "xilinx.com:module_ref:edge_detect:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_edge_detect_2_0",
+        "xci_path": "ip\\LED_Pattern_Engine_edge_detect_2_0\\LED_Pattern_Engine_edge_detect_2_0.xci",
+        "inst_hier_path": "edge_detect_2",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "edge_detect",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "signal_i": {
+            "direction": "I"
+          },
+          "posedge_o": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "negedge_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_7": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_debouncer_7_0",
+        "xci_path": "ip\\LED_Pattern_Engine_debouncer_7_0\\LED_Pattern_Engine_debouncer_7_0.xci",
+        "inst_hier_path": "debouncer_7",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "btn_i": {
+            "direction": "I"
+          },
+          "btn_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "edge_detect_3": {
+        "vlnv": "xilinx.com:module_ref:edge_detect:1.0",
+        "ip_revision": "1",
+        "xci_name": "LED_Pattern_Engine_edge_detect_3_0",
+        "xci_path": "ip\\LED_Pattern_Engine_edge_detect_3_0\\LED_Pattern_Engine_edge_detect_3_0.xci",
+        "inst_hier_path": "edge_detect_3",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "edge_detect",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n_i": {
+            "direction": "I"
+          },
+          "signal_i": {
+            "direction": "I"
+          },
+          "posedge_o": {
+            "direction": "O"
+          },
+          "negedge_o": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "btn_i_0_1": {
+        "ports": [
+          "btn_i_0",
+          "debouncer_2/btn_i"
+        ]
+      },
+      "btn_i_1_1": {
+        "ports": [
+          "btn_i_1",
+          "debouncer_6/btn_i"
+        ]
+      },
+      "btn_i_2_1": {
+        "ports": [
+          "SW2",
+          "debouncer_3/btn_i"
+        ]
+      },
+      "btn_i_2_2": {
+        "ports": [
+          "SW3",
+          "debouncer_5/btn_i"
+        ]
+      },
+      "btn_i_2_3": {
+        "ports": [
+          "btn_i_2",
+          "debouncer_4/btn_i"
+        ]
+      },
+      "btn_i_3_1": {
+        "ports": [
+          "btn_i_3",
+          "debouncer_7/btn_i"
+        ]
+      },
+      "clk_enable_gen_0_enable_o": {
+        "ports": [
+          "clk_enable_gen_0/enable_o",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "debouncer_0/clk_i",
+          "debouncer_1/clk_i",
+          "edge_detect_0/clk_i",
+          "debouncer_2/clk_i",
+          "debouncer_5/clk_i",
+          "debouncer_4/clk_i",
+          "debouncer_3/clk_i",
+          "edge_detect_1/clk_i",
+          "clk_enable_gen_0/clk_i",
+          "debouncer_6/clk_i",
+          "debouncer_7/clk_i",
+          "edge_detect_2/clk_i",
+          "edge_detect_3/clk_i",
+          "pattern_gen_0/clk_i"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "debouncer_1/rst_n_i",
+          "debouncer_0/rst_n_i",
+          "debouncer_2/rst_n_i",
+          "edge_detect_0/rst_n_i",
+          "debouncer_5/rst_n_i",
+          "debouncer_4/rst_n_i",
+          "debouncer_3/rst_n_i",
+          "edge_detect_1/rst_n_i",
+          "clk_enable_gen_0/rst_n_i",
+          "debouncer_6/rst_n_i",
+          "debouncer_7/rst_n_i",
+          "edge_detect_2/rst_n_i",
+          "edge_detect_3/rst_n_i",
+          "pattern_gen_0/rst_n_i"
+        ]
+      },
+      "debouncer_0_btn_o": {
+        "ports": [
+          "debouncer_0/btn_o",
+          "xlconcat_0/In0"
+        ]
+      },
+      "debouncer_1_btn_o": {
+        "ports": [
+          "debouncer_1/btn_o",
+          "xlconcat_0/In1"
+        ]
+      },
+      "debouncer_2_btn_o": {
+        "ports": [
+          "debouncer_2/btn_o",
+          "edge_detect_0/signal_i"
+        ]
+      },
+      "debouncer_3_btn_o": {
+        "ports": [
+          "debouncer_3/btn_o",
+          "pattern_gen_0/up_or_down_i"
+        ]
+      },
+      "debouncer_4_btn_o": {
+        "ports": [
+          "debouncer_4/btn_o",
+          "edge_detect_1/signal_i"
+        ]
+      },
+      "debouncer_5_btn_o": {
+        "ports": [
+          "debouncer_5/btn_o",
+          "pattern_gen_0/halve_brightness_i"
+        ]
+      },
+      "debouncer_6_btn_o": {
+        "ports": [
+          "debouncer_6/btn_o",
+          "edge_detect_2/signal_i"
+        ]
+      },
+      "debouncer_7_btn_o": {
+        "ports": [
+          "debouncer_7/btn_o",
+          "edge_detect_3/signal_i"
+        ]
+      },
+      "edge_detect_0_posedge_o": {
+        "ports": [
+          "edge_detect_0/posedge_o",
+          "clk_enable_gen_0/start_i"
+        ]
+      },
+      "edge_detect_1_posedge_o": {
+        "ports": [
+          "edge_detect_1/posedge_o",
+          "pattern_gen_0/change_pattern_i"
+        ]
+      },
+      "edge_detect_2_posedge_o": {
+        "ports": [
+          "edge_detect_2/posedge_o",
+          "util_vector_logic_0/Op2"
+        ]
+      },
+      "edge_detect_3_posedge_o": {
+        "ports": [
+          "edge_detect_3/posedge_o",
+          "pattern_gen_0/reset_pattern_i"
+        ]
+      },
+      "ilslice_0_Dout": {
+        "ports": [
+          "ilslice_0/Dout",
+          "debouncer_0/btn_i"
+        ]
+      },
+      "ilslice_1_Dout": {
+        "ports": [
+          "ilslice_1/Dout",
+          "debouncer_1/btn_i"
+        ]
+      },
+      "pattern_gen_0_pattern_o": {
+        "ports": [
+          "pattern_gen_0/pattern_o",
+          "pattern_o_0"
+        ]
+      },
+      "step_rate_i_1": {
+        "ports": [
+          "step_rate_i",
+          "ilslice_0/Din",
+          "ilslice_1/Din"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "pattern_gen_0/step_i"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "clk_enable_gen_0/step_rate_i"
+        ]
+      }
+    }
+  }
+}
