@@ -13,3 +13,7 @@ The design was built to meet the following requirements:
 |Buttons pass through a ≥ 20 ms debouncer and a rising-edge detector|Wrote a debouncer with a configurable debounce time, and an edge detector that detects both rising and falling edges.|✅|
 
 **Physical Test:**
+
+
+https://github.com/user-attachments/assets/e3c4d8d5-531a-4929-8a8e-85a0e0fb6b93
+
